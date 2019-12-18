@@ -1,0 +1,16 @@
+com\cognizant\projectmanagement\model\ProjectObj.class
+com\cognizant\projectmanagement\controller\ParentTaskController.class
+com\cognizant\projectmanagement\repository\UserRepository.class
+com\cognizant\projectmanagement\dao\Project.class
+com\cognizant\projectmanagement\repository\TaskRepository.class
+com\cognizant\projectmanagement\dao\Task.class
+com\cognizant\projectmanagement\dao\ParentTask.class
+com\cognizant\projectmanagement\repository\ParentTaskRepository.class
+com\cognizant\projectmanagement\dao\User.class
+com\cognizant\projectmanagement\controller\ProjectController.class
+com\cognizant\projectmanagement\ProjectMangementFinalApplication.class
+com\cognizant\projectmanagement\controller\UserController.class
+com\cognizant\projectmanagement\controller\TaskController.class
+com\cognizant\projectmanagement\model\TaskObj.class
+com\cognizant\projectmanagement\model\UserRequest.class
+com\cognizant\projectmanagement\repository\ProjectRepository.class
