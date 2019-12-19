@@ -27,6 +27,7 @@ public class TaskDetails {
 		this.parentTask = parentTask;
 		this.startDate = startDate;
 		this.endDate = endDate;
+		
 	}
 	public int getTask_ID() {
 		return task_ID;

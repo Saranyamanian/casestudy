@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.assignment.TaskDetails;
+import com.example.assignment.TaskRepository;
+
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
 public class TaskController {	
@@ -20,7 +23,7 @@ public class TaskController {
 	TaskRepository assignmentRepository;	
 	
 	//Adding task	
-	@RequestMapping(method = RequestMethod.POST, value = "/Add")
+	@RequestMapping(method = RequestMethod.POST, value = "/AddTask")
 	public boolean  save(@RequestBody TaskDetails details) {
 		int length = assignmentRepository.findAll().size();
 		details.setTask_ID(++length);
@@ -29,7 +32,7 @@ public class TaskController {
         }
 	
 	//Getting task details	
-	@RequestMapping(method = RequestMethod.GET, value = "/Details")
+	@RequestMapping(method = RequestMethod.GET, value = "/TaskDetails")
 	public List<TaskDetails> assignment() {
 		List<TaskDetails> details = assignmentRepository.findAll();
 		return details;	
@@ -66,7 +69,7 @@ public class TaskController {
 	 }
 	
 	//Editing particular task details	
-	@RequestMapping(method=RequestMethod.PUT, value="/Update/{task_ID}")
+	@RequestMapping(method=RequestMethod.PUT, value="/UpdateTask/{task_ID}")
          public TaskDetails update(@PathVariable  int task_ID, @RequestBody TaskDetails assignment) {
         Optional<TaskDetails> particularDetail = assignmentRepository.findByTaskId(task_ID);
         TaskDetails c = particularDetail.get();
