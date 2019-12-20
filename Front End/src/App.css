@@ -1,0 +1,200 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+
+.custom-selects{
+  width:27%;
+  display: inline-block;
+
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem 1.75rem .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  }
+  .custom-selects1{
+    width:25%;
+    display: inline-block;
+
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .custom-selects2{
+    width:26%;
+    display: inline-block;
+
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .custom-selects3{
+    width:25%;
+    display: inline-block;
+
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+.marginTask{
+  margin-top:3%;
+  margin-left: 40.5%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.margin_project{
+  margin-left:10%;
+  /* margin-top: 5%; */
+}
+.margin_user{
+  margin-left:20%;
+  /* margin-top: 5%; */
+}
+
+/*** Login Page ***/
+
+.navLogin{
+  color: white;
+}
+
+#pad{
+  margin: 20px;
+}
+#color_login{
+  color:white;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.textCenter{
+
+
+  font-size: 25px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  background-color:whitesmoke;
+  min-height: 100vh;
+ 
+  padding-left: 25%;
+  padding-top: 10%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(1, 5, 4);
+}
+
+.custom-selects{
+width:25%;
+display: inline-block;
+
+height: calc(1.5em + .75rem + 2px);
+padding: .375rem 1.75rem .375rem .75rem;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #495057;
+vertical-align: middle;
+background-color: #fff;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+
+}
+
+body{   
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.marginUser{
+  margin-top:3%;
+}
+
+th,td{
+  padding-left: 50px;
+}
