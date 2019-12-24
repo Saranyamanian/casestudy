@@ -103,16 +103,59 @@ handleUpdateChange = (event) =>{
             <div className="row">
         <div className="row col-md-3">
                     <nav className="navbar navbar-primary bg">
-                    <a id= "color_login" className="navbar-brand navLogin"></a>
-                        <form className="form-inline">                      
-                        <ul className="list-group">                              
-                              <li className="list-group-item"><Link to = '/AddTask'> <button className="btn my-2 my-sm-0" type="submit">Add Task</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                              <li className="list-group-item"><Link to = '/ViewTasks'> <button className="btn my-2 my-sm-0" type="submit">View Tasks</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                        </ul>                      
-                        </form>
+                    <form className="form-inline">
+                <ul className="list-group" style={{width: "170px"}}>
+                    <li className="list-group-item">
+                        <div className="dropdown">
+                            <button className="dropbtn">Task</button>
+                            <div className="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddTask'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add Task</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewTasks'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View Task</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="list-group-item">
+                        <div className="dropdown">
+                            <button className="dropbtn">Project</button>
+                            <div className="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddProject'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add Project</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewProjects'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View Project</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="list-group-item">
+                        <div className="dropdown">
+                            <button className="dropbtn">User</button>
+                            <div className="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddUser'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add User</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewUsers'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View User</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </form>
                     </nav>
                 </div>
-                <div  class="col-md-9">
+                <div  className="col-md-9">
                     <nav className="navbar navbar-primary bg">
                     <a id= "color_login" className="navbar-brand navLogin">List of Tasks</a>
                         <form className="form-inline">                        
@@ -148,7 +191,7 @@ handleUpdateChange = (event) =>{
                         </div>
                         <select id="width" style={{width: "275px",marginLeft: "40px"}} name="Priority" className="custom-selects" id="inputGroupSelect01" value={this.state.Priority} onChange={this.handleChange}>
                         
-                            <option  value="0" selected>0</option>
+                            <option  value="0">0</option>
                             <option  value="5">5</option>
                             <option  value="10">10</option>
                             <option  value="15">15</option>
@@ -193,7 +236,7 @@ handleUpdateChange = (event) =>{
                     <span>Parent Task</span>&nbsp;&nbsp;
                     </div>
                     <select id="width" style={{width: "275px",marginLeft: "15px"}} name="Parent_Task" className="custom-selects3" id="inputGroupSelect01" value={this.state.Parent_Task} onChange={this.handleChange}> 
-                        <option  value="Parent Task 1" selected>Task 1</option>
+                        <option  value="Parent Task 1">Task 1</option>
                         <option  value="Parent Task 2">Task 2</option>
                         <option  value="Parent Task 3">Task 3</option>
                         <option  value="Parent Task 4 ">Task 4</option>

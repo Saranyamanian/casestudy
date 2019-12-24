@@ -8,6 +8,9 @@ import { AddTask } from './Components/AddTask';
 
 import index from './index'
 import { ViewTasks } from './Components/ViewTasks';
+import { AddProject } from './Components/AddProject';
+import { AddUser } from './Components/AddUser';
+
 import Routers from './Routers';
 function App() {
   return (

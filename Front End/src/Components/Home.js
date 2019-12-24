@@ -9,7 +9,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import ViewTasks from './ViewTasks'
 import axios from 'axios';
 
-
 const initialState = {
     Task: '',
     Priority: '',
@@ -108,24 +107,67 @@ handleUpdateChange = (event) =>{
         return (
 <div>
     <MuiThemeProvider>
-        <div>
-        <div className="row col-md-12">
-            <h3 style={{marginTop: "15px",marginLeft: "30px"}}>Task Manager</h3>
-            </div>
-                <div className="row col-md-6">
-                    <nav className="navbar navbar-primary bg">
-                    <a id= "color_login" className="navbar-brand navLogin"></a>
-                        <form className="form-inline">                      
-                        <ul className="list-group">                              
-                              <li className="list-group-item"><Link to = '/AddTask'> <button className="btn my-2 my-sm-0" type="submit">Add Task</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                              <li className="list-group-item"><Link to = '/ViewTasks'> <button className="btn my-2 my-sm-0" type="submit">View Task</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                        </ul>                      
-                        </form>
-                    </nav>
-                </div>
-                </div>
-             
-    </MuiThemeProvider>
+    <div>
+    <div className="row col-md-12">
+        <h3 style={{marginTop: "15px",marginLeft: "30px"}}>Task Manager</h3>
+    </div>
+    <div className="row col-md-6">
+        <nav className="navbar navbar-primary bg">
+            <a id="color_login" className="navbar-brand navLogin"></a>
+            <form className="form-inline">
+                <ul className="list-group" style={{width: "170px"}}>
+                    <li className="list-group-item">
+                        <div className="dropdown">
+                            <button className="dropbtn">Task</button>
+                            <div className="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddTask'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add Task</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewTasks'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View Task</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="list-group-item">
+                        <div className="dropdown">
+                            <button className="dropbtn">Project</button>
+                            <div className="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddProject'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add Project</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewProjects'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View Project</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="list-group-item">
+                        <div className="dropdown">
+                            <button className="dropbtn">User</button>
+                            <div className="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddUser'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add User</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewUsers'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View Users</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </form>
+        </nav>
+    </div>
+</div>
+</MuiThemeProvider>
 </div>
         )
     }

@@ -85,7 +85,7 @@ export class UpdateTask extends Component {
             endDate: this.state.End_Date,
         }
         console.log(formValues)
-        alert('update')
+        alert('Updated Task')
         const url = `${API_URL}/UpdateTask/${state.Task_ID}`;
         console.log(url)
         axios.put(url, formValues).then(response => response.data)
@@ -119,12 +119,56 @@ export class UpdateTask extends Component {
         <div className="row col-md-3">
                     <nav className="navbar navbar-primary bg">
                     <a id= "color_login" className="navbar-brand navLogin"></a>
-                        <form className="form-inline">                      
-                        <ul className="list-group">                              
-                              <li className="list-group-item"><Link to = '/AddTask'> <button className="btn my-2 my-sm-0" type="submit">Add Task</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                              <li className="list-group-item"><Link to = '/ViewTasks'> <button className="btn my-2 my-sm-0" type="submit">View Tasks</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                        </ul>                      
-                        </form>
+                    <form className="form-inline">
+                <ul className="list-group" style={{width: "170px"}}>
+                    <li className="list-group-item">
+                        <div class="dropdown">
+                            <button class="dropbtn">Task</button>
+                            <div class="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddTask'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add Task</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewTasks'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View Task</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="list-group-item">
+                        <div class="dropdown">
+                            <button class="dropbtn">Project</button>
+                            <div class="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddProject'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add Project</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewProjects'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View Project</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="list-group-item">
+                        <div class="dropdown">
+                            <button class="dropbtn">User</button>
+                            <div class="dropdown-content">
+                                <div className="list-group-item">
+                                    <Link to='/AddUser'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">Add User</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div className="list-group-item">
+                                    <Link to='/ViewUsers'>
+                                    <button style={{width: "174px", height: "10px"}} className="btn my-2 my-sm-0" type="submit">View User</button>
+                                    </Link>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </form>
                     </nav>
                 </div>
                 <div className="col-md-9"><nav className="navbar navbar-primary bg"><a id="color_login" className="navbar-brand navLogin">Add Tasks</a><form className="form-inline"><a href="/Home">  <button className="btn btn-primary my-2 my-sm-0" type="submit">Back</button></a></form></nav></div>
