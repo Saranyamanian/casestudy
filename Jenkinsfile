@@ -13,19 +13,19 @@ if (build ==~ /(?i)(Y|YES|T|TRUE|ON|RUN)/) {
         }
 
         stage('CLONE REPOSITORY') {
-            checkout https://github.com/Balamurugan92/CapsuleUpdated.git
+            checkout https://github.com/Saranyamanian/casestudy.git
         }
 
         stage ('BUILD APPLICATION') {  
                     maven.inside{
-                    writeFile file: 'settings.xml', text: "<settings><mirrors><mirror><id>ctsMirror</id><mirrorOf>*</mirrorOf><name>CTS Mirror</name><url>https://github.com/Balamurugan92/CapsuleUpdated.git</url></mirror></mirrors><profiles><profile><id>cts-ope</id><activation><activeByDefault>true</activeByDefault></activation><repositories><repository><id>cts</id><url>http://cts/central</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></repository></repositories><pluginRepositories><pluginRepository><id>cts</id><url>http://cts/central</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></pluginRepository></pluginRepositories></profile></profiles></settings>"
+                    writeFile file: 'settings.xml', text: "<settings><mirrors><mirror><id>ctsMirror</id><mirrorOf>*</mirrorOf><name>CTS Mirror</name><url>https://github.com/Saranyamanian/casestudy.git</url></mirror></mirrors><profiles><profile><id>cts-ope</id><activation><activeByDefault>true</activeByDefault></activation><repositories><repository><id>cts</id><url>http://cts/central</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></repository></repositories><pluginRepositories><pluginRepository><id>cts</id><url>http://cts/central</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></pluginRepository></pluginRepositories></profile></profiles></settings>"
                     sh 'mvn -B -s settings.xml -f ./Web/api clean install'
             } 
          }
          
         stage ('SONAR AUDIT') {
                 maven.inside{
-                writeFile file: 'settings.xml', text: "<settings><mirrors><mirror><id>ctsMirror</id><mirrorOf>*</mirrorOf><name>CTS Mirror</name><url>https://github.com/Balamurugan92/CapsuleUpdated.git</url></mirror></mirrors><profiles><profile><id>cts-ope</id><activation><activeByDefault>true</activeByDefault></activation><repositories><repository><id>cts</id><url>http://cts/central</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></repository></repositories><pluginRepositories><pluginRepository><id>cts</id><url>http://cts/central</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></pluginRepository></pluginRepositories></profile></profiles></settings>"
+                writeFile file: 'settings.xml', text: "<settings><mirrors><mirror><id>ctsMirror</id><mirrorOf>*</mirrorOf><name>CTS Mirror</name><url>https://github.com/Saranyamanian/casestudy.git</url></mirror></mirrors><profiles><profile><id>cts-ope</id><activation><activeByDefault>true</activeByDefault></activation><repositories><repository><id>cts</id><url>http://cts/central</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></repository></repositories><pluginRepositories><pluginRepository><id>cts</id><url>http://cts/central</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></pluginRepository></pluginRepositories></profile></profiles></settings>"
                 sh 'mvn -B -s settings.xml -f ./Web/api  clean org.jacoco:jacoco-maven-plugin:prepare-agent install verify sonar:sonar -Dmaven.test.skip'
             }
 
